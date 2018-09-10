@@ -1,0 +1,456 @@
+@import url(reset.css);
+
+html, body{
+    font-family: 'Merienda', cursive;
+    font-size: 16px;
+    line-height: 1.5;/*Базовая высота строчки*/
+    min-width: 280px; 
+    text-align: center;
+}
+h1,h2,h3,h4,h4_1,h5,h6 {
+	color: #3a3a3a;
+	font-weight: 750;
+	margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+ul{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+li{
+    list-style-type: square;
+}
+.header{
+    background-color: gray;
+    background: url(../img/1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    background-size: 1920px auto;
+    height: 70vh;
+    color:#fff;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+.questions{
+    height: auto;
+    margin: auto;
+    margin-right: 0.2em;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border-radius: 10px;
+    text-align: right;
+    color: crimson;
+    font-size: 20px;
+    font-weight: 900;
+    transition: 1s;
+    opacity: 0;
+    animation-name: questionsLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+@keyframes questionsLeft {
+    0% {
+        transform: translateX(100%);
+    }  
+    100%{
+        transform: translateX(0%);        
+    }
+}
+.header_title{
+    font-size: 72px;
+    font-family: 'Gaegu', cursive;
+    letter-spacing: 0.2em;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0.1em;
+    line-height: 1;
+    transition: 1s;
+    opacity: 0;
+}
+.line-spacer{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #fff;
+    transition: 1s;
+    opacity: 0;
+}
+.header_about{
+    font-size: 30px;
+    transition: 1s;
+    opacity: 0;
+}
+.header_slogan{
+    font-size: 80px;
+    margin:auto;
+    margin-bottom: 20px;
+    transition: 1s;
+    opacity: 0;
+    line-height: 1;
+}
+
+.about{
+    margin-top: 50px;
+}
+.section-heading h2{
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.section-heading h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.row h4{
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#img1{
+    transition: .4s;
+    opacity: 0;
+}
+#img2{
+    transition: .8s;
+    opacity: 0;
+}
+#img3{
+    transition: 1.2s;
+    opacity: 0;
+}
+#img4{
+    transition: 1.6s;
+    opacity: 0;
+}
+.spacer1{
+    background-color: beige;
+    background-image: url(../img/spacer1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+}
+.spacer2{
+    background-color: beige;
+    background-image: url(../img/spacer2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+}
+.contact{
+    background-color: grey;
+    background-image: url(../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    height: 100vh;
+}
+@media (max-width: 992px){
+    .header{
+        height: 40vh;
+    }
+    .spacer1{
+        height: 30vh;
+    }
+    .spacer2{
+        height: 30vh;
+    }
+    .contact{
+        height: 55vh;
+    }
+}
+@media (max-width: 767px) {
+    .header{
+        height: 60vh;
+    }
+    .spacer1{
+        height: 25vh;
+    }
+    .spacer2{
+        height: 24vh;
+    }
+}
+@media (max-width: 670px){
+    .about h4{
+        font-size: 14px;
+    }
+}
+.wrapper{
+    padding-top: 5vh;
+}
+.wrapper input, .wrapper select{
+    width: 40%;
+    margin-left: 30%;
+    float: left;
+    border-radius: 5px;
+    border: 2px solid silver;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.wrapper select{
+    width: 40%;
+    margin-left: 30%;
+}
+.wrapper textarea{
+    width: 40%;
+    height: 100px;
+    margin-left: 30%;
+    float: left;
+    border-radius: 5px;
+    border: 2px solid silver;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    resize: none;
+}
+.wrapper input#done{
+    margin-top: 1%;
+    width: 40%;
+    margin-left: 30%;
+    color: crimson;
+}
+.wrapper input#done:hover{
+    border: 2px solid crimson;
+    cursor: pointer;
+}
+.wrapper #messageShow{
+    display: none;
+    font-size: 1.2em;
+    float: left;
+    color: crimson;
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+    padding-bottom: 0.2em;
+    background-color: lightgray;
+    opacity: 1;
+    border-radius: 5px;
+    border: 2px solid silver;
+}
+.contact h2{
+    padding-top: 50px;
+    color: #fff;
+    font-size: 55px;
+    font-weight: 750;
+    text-align: center;
+    font-family: 'Merienda', cursive;
+}
+@media (max-width: 799px){
+    .wrapper input, .wrapper select{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper select{
+        width: 82%;
+        margin-left: 10%;
+    }
+    .wrapper textarea{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper #messageShow{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper input#done{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media (max-width: 992px){
+    .contact{
+        height: 55vh;
+    }
+    .wrapper input, .wrapper select{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper select{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper textarea{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper #messageShow{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper input#done{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media (max-width: 767px){
+    .wrapper input, .wrapper select{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper select{
+        width: 82%;
+        margin-left: 10%;
+    }
+    .wrapper textarea{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper #messageShow{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .wrapper input#done{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .contact h2{
+        line-height: 1em;
+        padding-top: 10px;
+    }
+}
+.services{
+    padding-top: 50px;
+}
+.col-xs-4.col-sm-4.col-md-4.col-lg-4{
+    
+}
+
+#num1 h3, #num2 h3, #num3 h3,.works h3{
+    font-size: 28px;
+}
+#num1 h5, #num2 h5, #num3 h5{
+    font-size: 20px;
+    height: 80px;
+}
+@media (max-width: 992px){
+    #num1 h5, #num2 h5, #num3 h5{
+        height: 100px;    
+    }
+    #num2 h5, #num3 h5{
+        margin-top: 50px;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 870px) {
+    #num1 h5{
+        height: 130px;
+        margin-top: 30px;
+    }
+    #num1 h5,#num2 h5,#num3 h5{
+        line-height: 1em;
+    }
+}
+.works h3{
+    padding-bottom: 10px;
+    border: 3px solid crimson;
+    border-radius: 50px;
+    width: 50%;
+    margin-left: 25%;
+}
+@media (max-width: 1200px){
+    .works h3{
+        width: 60%;
+        margin-left: 20%;    
+    }
+}
+@media (max-width: 992px){
+    .works h3{
+        width: 70%;
+        margin-left: 15%;    
+    }
+}
+@media (max-width: 767px) {
+    .works h3{
+        width: 80%;
+        margin-left: 10%;
+        font-size: 20px;
+    }
+}
+@media
+.works h5{
+    font-size: 20px;
+    font-weight: 300;
+    
+}
+.points{
+    text-align: left;
+}
+#num1 h6, #num2 h6, #num3 h6{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#num1{
+    opacity: 0;
+    animation-name: none;
+    transition: .2s;
+    animation-duration: .2s;
+    animation-timing-function: ease-out;
+}
+#num1 h3, #num2 h3, #num3 h3,#num1 h5, #num2 h5, #num3 h5, .points h6{
+    font-family: 'Merienda', cursive;
+}
+#num2{
+    opacity: 0;
+    animation-name: none;
+    transition: .4s;
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+}
+#num3{
+    opacity: 0;
+    animation-name: none;
+    transition: .6s;
+    animation-duration: .6s;
+    animation-timing-function: ease-out;
+}
+@keyframes numbersTop {
+    0% {
+        transform: translateY(100%);
+    }  
+    100%{
+        transform: translateY(0%);        
+    }
+}
+.works{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.works h3,.works h4,.works h5{
+    font-family: 'Merienda', cursive;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+.works h4{
+    font-size: 24px;
+}
+.footer{
+    position: fixed;
+    width: 100%;
+    background: #2b2b2b;
+    color: #ddd;
+    padding: 0px 0 0px;
+    bottom: 0;
+    left: 0;
+    
+}
+.container{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.footer .container p{
+    text-align: center;
+}
